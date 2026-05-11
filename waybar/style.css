@@ -1,0 +1,142 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Shared floating islands */
+.modules-left,
+.modules-center,
+.modules-right {
+
+    background: rgba(13, 13, 13, 0.78);
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+
+    margin-top: 2px;
+    padding: 4px 10px;
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.02),
+        0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* ========================================
+   GNOME STYLE WORKSPACE PILLS
+======================================== */
+
+#workspaces {
+    background: transparent;
+}
+
+#workspaces button {
+
+	all: unset;
+	
+    padding: 0 5px;
+    margin: 0px 4px;
+    min-width: 30px;
+    border-radius: 666px;
+
+    background: transparent;
+    color: #7f849c;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover */ 
+#workspaces button:hover {
+
+    background: rgba(255,255,255,0.08);
+    color: #cdd6f4;
+}
+
+/* Active workspace pill */
+#workspaces button.active {
+
+    min-width: 45px;
+    background: #ffffff;
+    color: #11111b;
+    font-weight: 900;
+}
+
+/* Occupied workspace */
+#workspaces button.visible {
+    background: rgba(255,255,255,1);
+    color: #11111b;
+}
+
+/* Clock center island */
+#clock {
+
+    color: #ffffff;	
+    font-weight: 900;
+    padding: 0 10px;
+}
+
+/* ========================================
+   MEDIA ISLAND
+======================================== */
+
+#custom-media {
+    color: white;
+    font-weight: 800;
+    padding: 0 2px;
+}
+
+/* custom mic */
+#custom-mic {
+	padding: 0 2px;
+}
+#custom-mic.headset {
+    color: #89dceb;
+}
+
+#custom-mic.internal {
+    color: #f38ba8;
+}
+
+#custom-mic.idle {
+    color: white;
+}
+
+#custom-mic.muted {
+    color: #6c7086;
+}
+
+/* Right modules */
+#pulseaudio,
+#network,
+#tray {
+    color: #ffffff;
+    font-weight: 800;
+    padding: 0 3px;
+}
+
+/* Tray */
+
+#tray image {
+    padding: 0px;
+    margin: 0px;
+}
+/* Power */
+#custom-power {
+	margin-right: 7px;
+}
+
+/* Tooltip */
+tooltip {
+    background: #11111b;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+tooltip label {
+    color: #ffffff;
+    font-weight: 600;
+}
