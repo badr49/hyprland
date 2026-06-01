@@ -1,7 +1,7 @@
 #!/bin/bash
 
-chosen=$(printf "Shutdown\nReboot\nLock\nLogout" | \
-fuzzel --config ~/.config/fuzzel/powermenu.ini --dmenu --prompt " ")
+chosen=$(printf "Shutdown\nReboot\nLogout" | \
+fuzzel --config ~/.config/fuzzel/powermenu.ini --dmenu --hide-prompt)
 
 case "$chosen" in
     Shutdown)
@@ -10,10 +10,7 @@ case "$chosen" in
     Reboot)
         systemctl reboot
         ;;
-    Lock)
-        hyprlock
-        ;;
     Logout)
-        hyprctl dispatch exit
+        hyprctl dispatch 'hl.dsp.exit()' 
         ;;
 esac

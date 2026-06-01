@@ -7,7 +7,7 @@ if [[ "$status" == "Playing" || "$status" == "Paused" ]]; then
     artist=$(playerctl metadata artist 2>/dev/null)
 
     [ -z "$title" ] && title="Unknown"
-    [ -z "$artist" ] && artist="Radio?"
+    [ -z "$artist" ] && artist=""
 
     text="$artist $title"
 

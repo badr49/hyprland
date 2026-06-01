@@ -17,9 +17,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("hyprpaper")
 end)
 
-hl.on("hyprland.start", function ()
-    hl.exec_cmd("cd Documents/linux-idle-master/ && python steam-idle.py 359550")
-end)
 
 ----------------
 ----  MISC  ----
@@ -58,3 +55,9 @@ hl.gesture({
     direction = "horizontal",
     action = "workspace"
 })
+
+-- Custom Splash Plugin
+hl.plugin.load("/home/noob/.config/hypr/plugins/splash_thing.so")
+
+-- HyprMod managed settings
+dofile("/home/noob/.config/hypr/hyprland-gui.lua")

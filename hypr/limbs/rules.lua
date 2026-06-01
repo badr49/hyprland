@@ -94,6 +94,12 @@ hl.window_rule({
     float = true,
 })
 
+hl.window_rule({
+    name  = "Settings",
+    match = { class = "app" },
+    float = true,
+})
+
 -- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",
